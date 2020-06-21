@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:gravity="center"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="10dp"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="두번째 액티비티"
+        android:textSize="25sp"/>
 
     <Button
-        android:id="@+id/firstActivityBtn"
+        android:id="@+id/goBackBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="다른 화면으로 이동하기" />
-
-    <Button
-        android:id="@+id/goToSecondBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="두번째 화면으로 이동" />
+        android:text="기존 화면 복귀" />
 
 
 </LinearLayout>

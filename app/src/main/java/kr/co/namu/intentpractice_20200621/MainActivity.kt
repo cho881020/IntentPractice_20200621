@@ -19,5 +19,16 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+//        Ctrl + Alt + L (윈도우)
+//        Cmd + option + L (맥)  => 들여쓰기 자동 정리
+
+        goToSecondBtn.setOnClickListener {
+
+            val myIntent = Intent(this, SecondActivity::class.java)
+            startActivity(myIntent)
+
+        }
+
+
     }
 }
