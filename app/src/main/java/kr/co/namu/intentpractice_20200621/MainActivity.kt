@@ -1,5 +1,6 @@
 package kr.co.namu.intentpractice_20200621
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -52,4 +53,28 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+//    어떤 종류가 되었든, 결과를 가지고 돌아올때 실행되는 함수.
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+//        이 함수가 실행된 이유 (어떤 요청?) => 1000번이었는지? => 닉네임 변경을 위해 다녀온건지?
+        if (requestCode == 1000) {
+
+//            확인을 누른게 맞는지? => 취소를 한게 아닌지?
+            if (resultCode == Activity.RESULT_OK) {
+
+//                닉변 화면에서 첨부해준 newNickName 스트링값을 저장.
+                val newNick = data?.getStringExtra("newNickName")
+
+//                받아온 닉네임을 텍스트뷰에 표시
+                nickNameTxt.text = newNick
+
+            }
+
+        }
+
+    }
+
 }
