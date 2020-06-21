@@ -29,6 +29,19 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        goToThirdBtn.setOnClickListener {
+
+//            적혀있는 메세지가 뭔지 받아서 (1) => 화면이동시 전달 (2)
+
+//            메세지 내용을 변수에 기록
+            val inputMessage = messageEdt.text.toString()
+
+//            일단 화면 이동 코드부터 작성
+            val myIntent = Intent(this, ThirdActivity::class.java)
+            startActivity(myIntent)
+
+        }
+
 
     }
 }
